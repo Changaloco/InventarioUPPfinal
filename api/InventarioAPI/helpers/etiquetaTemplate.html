@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Etiqueta!</title>
+    <script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.4/dist/JsBarcode.all.min.js"></script>
+    <meta
+      name="description"
+      content="Source code generated using layoutit.com"
+    />
+    <meta name="author" content="LayoutIt!" />
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: "Sackers Gothic Std";
+        font-weight: 500;
+        font-size: 10px;
+        background: rgb(255, 255, 255);
+        -webkit-print-color-adjust: exact;
+        box-sizing: border-box;
+      }
+      div.a {
+        display: inline;
+      }
+      div.container {
+        display: flex;
+        flex-direction: row;
+      }
+      div.item2{
+        max-width: 400 px;
+      }
+     div.contorno{
+      background-color: lightgrey;
+      width: 1050px;
+      border: 15px solid gray;
+      padding: 50px;
+      margin: 20px;
+     }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="contorno">
+      <div class="container">
+        <div class="item">
+          <div class="etiqueta">
+            <svg
+            class="barcode"
+            jsbarcode-format="CODE128"
+            jsbarcode-value="{{info.claveControl}}"
+            jsbarcode-textmargin="0"
+            jsbarcode-fontoptions="bold"
+          ></svg>
+          </div>
+        </div>
+        <div class class="item2">
+          <div class="card">
+            <h5 class="card-header">{{info.claveControl}}</h5>
+            <div class="card-body">
+              <p class="card-text">{{info.nombreBien}}</p>
+            </div>
+            <div class="card-footer">{{info.numeroInventarioArmonizado}}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="JsBarcode.all.min.js"></script>
+  </body>
+</html>
+
+<script type="text/javascript">
+  JsBarcode(".barcode").init();
+</script>

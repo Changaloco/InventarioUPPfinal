@@ -1,0 +1,19 @@
+.menustyle{
+    position: fixed;
+    z-index: -1 ;
+    display: flex;
+    margin: 0 0 1rem;
+}
+
+Button{
+    width: 100%;
+    height: 100%;
+}
+.firstline{
+    display: inline-block;
+}
+.card {
+    margin: 0 auto; 
+    float: none; 
+    margin-bottom: 10px; 
+}
